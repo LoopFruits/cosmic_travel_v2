@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  post '/missions', to: 'missions#create'
+  get 'planets', to: 'planets#index'
+  resources :scientists # we're generating all of theese routes, thats why we aren't excluding anything
 end
